@@ -1,0 +1,65 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 18499976,
+                "file_path": "results/Jack-mode-left-3/Flying/Flying-18499976.onnx",
+                "reward": 421.4384255409241,
+                "creation_time": 1681358141.409258,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-left-3/Flying/Flying-18499976.pt"
+                ]
+            },
+            {
+                "steps": 18999970,
+                "file_path": "results/Jack-mode-left-3/Flying/Flying-18999970.onnx",
+                "reward": 474.91809463500977,
+                "creation_time": 1681358550.27323,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-left-3/Flying/Flying-18999970.pt"
+                ]
+            },
+            {
+                "steps": 19499975,
+                "file_path": "results/Jack-mode-left-3/Flying/Flying-19499975.onnx",
+                "reward": 484.84784507751465,
+                "creation_time": 1681358956.689547,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-left-3/Flying/Flying-19499975.pt"
+                ]
+            },
+            {
+                "steps": 19999952,
+                "file_path": "results/Jack-mode-left-3/Flying/Flying-19999952.onnx",
+                "reward": 522.7442092895508,
+                "creation_time": 1681359363.602829,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-left-3/Flying/Flying-19999952.pt"
+                ]
+            },
+            {
+                "steps": 20000016,
+                "file_path": "results/Jack-mode-left-3/Flying/Flying-20000016.onnx",
+                "reward": 522.7442092895508,
+                "creation_time": 1681359363.643341,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-left-3/Flying/Flying-20000016.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 20000016,
+            "file_path": "results/Jack-mode-left-3/Flying.onnx",
+            "reward": 522.7442092895508,
+            "creation_time": 1681359363.643341,
+            "auxillary_file_paths": [
+                "results/Jack-mode-left-3/Flying/Flying-20000016.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}

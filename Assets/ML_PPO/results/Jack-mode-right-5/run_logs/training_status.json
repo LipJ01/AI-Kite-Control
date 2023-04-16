@@ -1,0 +1,65 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 18499983,
+                "file_path": "results/Jack-mode-right-5/Flying/Flying-18499983.onnx",
+                "reward": 421.92363452911377,
+                "creation_time": 1681416463.2840052,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-right-5/Flying/Flying-18499983.pt"
+                ]
+            },
+            {
+                "steps": 18999943,
+                "file_path": "results/Jack-mode-right-5/Flying/Flying-18999943.onnx",
+                "reward": 452.57822847366333,
+                "creation_time": 1681416900.906794,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-right-5/Flying/Flying-18999943.pt"
+                ]
+            },
+            {
+                "steps": 19499950,
+                "file_path": "results/Jack-mode-right-5/Flying/Flying-19499950.onnx",
+                "reward": 472.3053181388161,
+                "creation_time": 1681417346.775433,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-right-5/Flying/Flying-19499950.pt"
+                ]
+            },
+            {
+                "steps": 19999999,
+                "file_path": "results/Jack-mode-right-5/Flying/Flying-19999999.onnx",
+                "reward": 430.60346754391986,
+                "creation_time": 1681417785.0481899,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-right-5/Flying/Flying-19999999.pt"
+                ]
+            },
+            {
+                "steps": 20000063,
+                "file_path": "results/Jack-mode-right-5/Flying/Flying-20000063.onnx",
+                "reward": 430.60346754391986,
+                "creation_time": 1681417785.0909271,
+                "auxillary_file_paths": [
+                    "results/Jack-mode-right-5/Flying/Flying-20000063.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 20000063,
+            "file_path": "results/Jack-mode-right-5/Flying.onnx",
+            "reward": 430.60346754391986,
+            "creation_time": 1681417785.0909271,
+            "auxillary_file_paths": [
+                "results/Jack-mode-right-5/Flying/Flying-20000063.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}

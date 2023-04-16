@@ -1,0 +1,56 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 142888,
+                "file_path": "results/KiteRun10-DontSpin/Flying/Flying-142888.onnx",
+                "reward": -14.563942409697033,
+                "creation_time": 1678218307.362516,
+                "auxillary_file_paths": [
+                    "results/KiteRun10-DontSpin/Flying/Flying-142888.pt"
+                ]
+            },
+            {
+                "steps": 499996,
+                "file_path": "results/KiteRun10-DontSpin/Flying/Flying-499996.onnx",
+                "reward": -12.329582225192677,
+                "creation_time": 1678218683.0219378,
+                "auxillary_file_paths": [
+                    "results/KiteRun10-DontSpin/Flying/Flying-499996.pt"
+                ]
+            },
+            {
+                "steps": 999967,
+                "file_path": "results/KiteRun10-DontSpin/Flying/Flying-999967.onnx",
+                "reward": -21.066632111867268,
+                "creation_time": 1678219203.221646,
+                "auxillary_file_paths": [
+                    "results/KiteRun10-DontSpin/Flying/Flying-999967.pt"
+                ]
+            },
+            {
+                "steps": 1000031,
+                "file_path": "results/KiteRun10-DontSpin/Flying/Flying-1000031.onnx",
+                "reward": -21.066632111867268,
+                "creation_time": 1678219203.2481961,
+                "auxillary_file_paths": [
+                    "results/KiteRun10-DontSpin/Flying/Flying-1000031.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000031,
+            "file_path": "results/KiteRun10-DontSpin/Flying.onnx",
+            "reward": -21.066632111867268,
+            "creation_time": 1678219203.2481961,
+            "auxillary_file_paths": [
+                "results/KiteRun10-DontSpin/Flying/Flying-1000031.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}

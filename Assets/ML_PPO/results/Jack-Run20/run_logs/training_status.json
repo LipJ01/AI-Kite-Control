@@ -1,0 +1,29 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 456736,
+                "file_path": "results/Jack-Run20/Flying/Flying-456736.onnx",
+                "reward": 899.7290293693543,
+                "creation_time": 1681233127.697195,
+                "auxillary_file_paths": [
+                    "results/Jack-Run20/Flying/Flying-456736.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 456736,
+            "file_path": "results/Jack-Run20/Flying.onnx",
+            "reward": 899.7290293693543,
+            "creation_time": 1681233127.697195,
+            "auxillary_file_paths": [
+                "results/Jack-Run20/Flying/Flying-456736.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}

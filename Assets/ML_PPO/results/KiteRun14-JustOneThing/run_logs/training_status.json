@@ -1,0 +1,47 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 499982,
+                "file_path": "results/KiteRun14-JustOneThing/Flying/Flying-499982.onnx",
+                "reward": -62.17690225442251,
+                "creation_time": 1678222382.136159,
+                "auxillary_file_paths": [
+                    "results/KiteRun14-JustOneThing/Flying/Flying-499982.pt"
+                ]
+            },
+            {
+                "steps": 999993,
+                "file_path": "results/KiteRun14-JustOneThing/Flying/Flying-999993.onnx",
+                "reward": -62.13382041454315,
+                "creation_time": 1678222772.531612,
+                "auxillary_file_paths": [
+                    "results/KiteRun14-JustOneThing/Flying/Flying-999993.pt"
+                ]
+            },
+            {
+                "steps": 1000057,
+                "file_path": "results/KiteRun14-JustOneThing/Flying/Flying-1000057.onnx",
+                "reward": -62.13382041454315,
+                "creation_time": 1678222772.5591319,
+                "auxillary_file_paths": [
+                    "results/KiteRun14-JustOneThing/Flying/Flying-1000057.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000057,
+            "file_path": "results/KiteRun14-JustOneThing/Flying.onnx",
+            "reward": -62.13382041454315,
+            "creation_time": 1678222772.5591319,
+            "auxillary_file_paths": [
+                "results/KiteRun14-JustOneThing/Flying/Flying-1000057.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}

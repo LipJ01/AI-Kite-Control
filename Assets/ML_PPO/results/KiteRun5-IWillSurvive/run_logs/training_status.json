@@ -1,0 +1,38 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 499965,
+                "file_path": "results/KiteRun5-IWillSurvive/Flying/Flying-499965.onnx",
+                "reward": -0.8930006608366966,
+                "creation_time": 1678210792.4554439,
+                "auxillary_file_paths": [
+                    "results/KiteRun5-IWillSurvive/Flying/Flying-499965.pt"
+                ]
+            },
+            {
+                "steps": 500001,
+                "file_path": "results/KiteRun5-IWillSurvive/Flying/Flying-500001.onnx",
+                "reward": -0.894333977252245,
+                "creation_time": 1678210792.482668,
+                "auxillary_file_paths": [
+                    "results/KiteRun5-IWillSurvive/Flying/Flying-500001.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500001,
+            "file_path": "results/KiteRun5-IWillSurvive/Flying.onnx",
+            "reward": -0.894333977252245,
+            "creation_time": 1678210792.482668,
+            "auxillary_file_paths": [
+                "results/KiteRun5-IWillSurvive/Flying/Flying-500001.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}

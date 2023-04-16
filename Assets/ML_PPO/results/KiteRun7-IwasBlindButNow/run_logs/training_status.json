@@ -1,0 +1,38 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 499960,
+                "file_path": "results/KiteRun7-IwasBlindButNow/Flying/Flying-499960.onnx",
+                "reward": -10.265601499627033,
+                "creation_time": 1678215536.185248,
+                "auxillary_file_paths": [
+                    "results/KiteRun7-IwasBlindButNow/Flying/Flying-499960.pt"
+                ]
+            },
+            {
+                "steps": 500024,
+                "file_path": "results/KiteRun7-IwasBlindButNow/Flying/Flying-500024.onnx",
+                "reward": -10.265601499627033,
+                "creation_time": 1678215536.206937,
+                "auxillary_file_paths": [
+                    "results/KiteRun7-IwasBlindButNow/Flying/Flying-500024.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500024,
+            "file_path": "results/KiteRun7-IwasBlindButNow/Flying.onnx",
+            "reward": -10.265601499627033,
+            "creation_time": 1678215536.206937,
+            "auxillary_file_paths": [
+                "results/KiteRun7-IwasBlindButNow/Flying/Flying-500024.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}
