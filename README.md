@@ -4,7 +4,7 @@
 ![](https://github.com/LipJ01/AI-Kite-Control/blob/main/demoGIF.gif)
 
 ## Setup
-If stuck with issues following below instructions. See Unity's Documentation [Install ML-Agents](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md)
+If stuck with issues following below instructions. See Unity's Documentation [Install ML-Agents](https://github.com/Unity-Technologies/ml-agents/blob/develop/docs/Installation.md).
 ### Python Environment (Required for training)
 
 This project uses Python 3.9
@@ -25,7 +25,7 @@ Open the scene `Assets/Scenes/Evaluation.unity` in Unity. Press play to start th
 Start the python server using ml-agents. The server will listen for observations from Unity and send back the actions to take whilst training.
 
 ```bash
-mlagents-learn config/trainer_config.yaml --run-id=run1
+mlagents-learn config/trainer_config.yaml --run-id=[model_name]
 ```
 This should output something like this:
 ```bash
@@ -35,3 +35,4 @@ This should output something like this:
 
 Then open the scene `Assets/Scenes/MVMS.unity` in Unity. Press play to start the training. The kites will be controlled by the trained model.
 
+Happy kiting!
