@@ -1,5 +1,8 @@
 # Flying virtual kites in a virtual world
 
+<!-- demo gif -->
+![](https://github.com/LipJ01/AI-Kite-Control/blob/main/demoGIF.gif)
+
 ## Setup
 
 ### Python Environment
