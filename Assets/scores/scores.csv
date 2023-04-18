@@ -68,3 +68,6 @@ Timestamp,Experiment,Car,Score
 2023-04-18 13:21:12,test,downwind,41.70883
 2023-04-18 13:21:12,test,left,29.94244
 2023-04-18 13:21:12,test,right,-40.02946
+2023-04-18 13:26:29,test,downwind,42.00782
+2023-04-18 13:26:29,test,left,-45.90268
+2023-04-18 13:26:29,test,right,34.39506
