@@ -33,6 +33,6 @@ This should output something like this:
 2021-10-18 16:38:00 INFO [environment.py:100] Listening on port 5004. Start training by pressing the Play button in the Unity Editor.
 ```
 
-Then open the scene `Assets/Scenes/MVMS.unity` in Unity. Press play to start the training. The kites will be controlled by the trained model.
+Then open the scene `Assets/Scenes/MVMS.unity` in Unity. Press play to start the training.
 
 Happy kiting!
