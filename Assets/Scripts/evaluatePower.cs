@@ -12,7 +12,6 @@ public class evaluatePower : MonoBehaviour
     private Vector3 downwindStartingPosition;
     private Vector3 leftStartingPosition;
     private Vector3 rightStartingPosition;
-
     public GameObject downwindCarPrefab;
     public GameObject leftCarPrefab;
     public GameObject rightCarPrefab;
@@ -81,7 +80,7 @@ public class evaluatePower : MonoBehaviour
         }
         // instantiate cars
         downwindCar = Instantiate(downwindCarPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        Debug.Log("Downwind car instantiated");
+        // Debug.Log("Downwind car instantiated");
         leftCar = Instantiate(leftCarPrefab, new Vector3(30, 0, 0), Quaternion.identity);
         rightCar = Instantiate(rightCarPrefab, new Vector3(-30, 0, 0), Quaternion.identity);
 

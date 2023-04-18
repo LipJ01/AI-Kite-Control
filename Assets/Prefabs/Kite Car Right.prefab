@@ -177,7 +177,7 @@ MonoBehaviour:
   joyController: {fileID: 4784834356568938150}
   rewardMode0: 0
   rewardMode1: 0
-  rewardMode2: 0
+  rewardMode2: 1
   rewardMode3: 0
   floorCollider: {fileID: 0}
   kiteCollider: {fileID: 4784834357239351041}
@@ -217,7 +217,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 12cb8d7b3adf14404aa765cd5b47f642, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 7a7d4c3d1b5044d82be1f49df2e66d93, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Flying
@@ -247,8 +247,8 @@ MonoBehaviour:
   joint4: {fileID: 4784834356697822071}
   jointSim: {fileID: 4784834356568938146}
   carController: {fileID: 4784834356568938148}
-  leftModel: {fileID: 5022602860645237092, guid: 63896e8010a22452dac2386d7de01e4d, type: 3}
-  rightModel: {fileID: 5022602860645237092, guid: 1ccaed672ad694d9f85f8ddba2ed5ab2, type: 3}
+  leftModel: {fileID: 5022602860645237092, guid: dfc5349088a9948d391128a9765bf516, type: 3}
+  rightModel: {fileID: 5022602860645237092, guid: dfc5349088a9948d391128a9765bf516, type: 3}
   behaviorParameters: {fileID: 4784834356568938145}
   agent: {fileID: 4784834356568938147}
 --- !u!114 &4784834356568938151
@@ -329,6 +329,9 @@ MonoBehaviour:
   rightCarPrefab: {fileID: 0}
   csvFilePath: right.csv
   experimentName: test
+  maxResets: 10
+  resetTime: 20
+  resetCounter: 0
 --- !u!1 &4784834356603060248
 GameObject:
   m_ObjectHideFlags: 0

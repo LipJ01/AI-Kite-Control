@@ -1984,7 +1984,7 @@ MonoBehaviour:
   joyController: {fileID: 8723579216058837422}
   rewardMode0: 0
   rewardMode1: 0
-  rewardMode2: 0
+  rewardMode2: 1
   rewardMode3: 0
   floorCollider: {fileID: 0}
   kiteCollider: {fileID: 8723579215097965142}
@@ -2024,7 +2024,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: 63896e8010a22452dac2386d7de01e4d, type: 3}
+  m_Model: {fileID: 5022602860645237092, guid: 5b1db99477d954a5da6a45472fd62fa4, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Flying
@@ -2136,6 +2136,9 @@ MonoBehaviour:
   rightCarPrefab: {fileID: 0}
   csvFilePath: left.csv
   experimentName: test
+  maxResets: 10
+  resetTime: 20
+  resetCounter: 0
 --- !u!1 &8723579216080318972
 GameObject:
   m_ObjectHideFlags: 0

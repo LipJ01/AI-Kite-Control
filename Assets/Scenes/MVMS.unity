@@ -3589,12 +3589,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4946440553781766634, guid: 11aceb7a181964721adad735567fec82, type: 3}
       propertyPath: rewardMode1
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4946440553781766634, guid: 11aceb7a181964721adad735567fec82, type: 3}
       propertyPath: rewardMode2
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4946440553781766635, guid: 11aceb7a181964721adad735567fec82, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: 5b1db99477d954a5da6a45472fd62fa4, type: 3}
     - target: {fileID: 4946440553781766635, guid: 11aceb7a181964721adad735567fec82, type: 3}
       propertyPath: m_BrainParameters.VectorObservationSize
       value: 12
