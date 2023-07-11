@@ -1,0 +1,47 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1687967078",
+        "python_version": "3.9.7 (default, Sep 16 2021, 23:53:23) \n[Clang 12.0.0 ]",
+        "command_line_arguments": "/Users/jacklippold/miniforge3/envs/unity-mla/bin/mlagents-learn config/config12.yaml --run-id=Jack-mode-right-69",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.8.0.post3",
+        "numpy_version": "1.23.1",
+        "end_time_seconds": "1687967081"
+    },
+    "total": 3.3119663750000004,
+    "count": 1,
+    "self": 0.022119208000000334,
+    "children": {
+        "run_training.setup": {
+            "total": 0.03381162499999979,
+            "count": 1,
+            "self": 0.03381162499999979
+        },
+        "TrainerController.start_learning": {
+            "total": 3.2560355420000002,
+            "count": 1,
+            "self": 0.0011766670000006307,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 3.25481825,
+                    "count": 1,
+                    "self": 3.25481825
+                },
+                "trainer_threads": {
+                    "total": 1.4999999997655777e-06,
+                    "count": 1,
+                    "self": 1.4999999997655777e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 3.9124999999806676e-05,
+                    "count": 1,
+                    "self": 3.9124999999806676e-05
+                }
+            }
+        }
+    }
+}

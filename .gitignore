@@ -1,1 +1,48 @@
-**
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+
+# Visual Studio / MonoDevelop generated
+/*.booproj
+*.pidb
+*.sln
+*.suo
+*.user
+*.userprefs
+*.unityproj
+*.csproj
+*.unityproj
+*.sln.DotSettings
+.vs/
+
+# Gradle
+/gradle/
+/gradlew
+
+# macOS
+.DS_Store
+/.Spotlight-V100
+/.Trashes/
+/Icon?
+._*
+
+# Windows
+/Thumbs.db
+/[Dd]esktop.ini
+
+# aider
+.aider.ident.cache.v1
+.aider.tags.cache.v1
+
+# For nows...
+ProjectSettings
+UserSettings
+Packages
+.plastic/
+mono_crash.**
+.vscode/settings.json
