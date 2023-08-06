@@ -36,8 +36,8 @@
 /[Dd]esktop.ini
 
 # aider
-.aider.ident.cache.v1
-.aider.tags.cache.v1
+# .aider.ident.cache.v1
+# .aider.tags.cache.v1
 
 # For nows...
 ProjectSettings
