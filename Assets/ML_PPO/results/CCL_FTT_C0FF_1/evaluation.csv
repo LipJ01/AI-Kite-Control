@@ -1,0 +1,7 @@
+model_name,steps,time_elapsed,final_score,number_of_crashes,varying_wind, wind_strength
+CCL_FTT_C0FF_1,49988,30.00305,3171.895,3,False,40
+CCL_FTT_C0FF_1,149968,30.00003,2898.298,9,False,40
+CCL_FTT_C0FF_1,249975,30.00696,3105.54,11,False,40
+CCL_FTT_C0FF_1,349993,30.00421,3540.908,13,False,40
+CCL_FTT_C0FF_1,449992,30.02348,2588.839,23,False,40
+

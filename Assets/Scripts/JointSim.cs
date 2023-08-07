@@ -16,12 +16,17 @@ public class JointSim : MonoBehaviour
 
     // This model can be used to simulate the behavior of the kite in different wind conditions and to study its dynamics. By considering the forces acting on the kite, it is possible to make predictions about its motion and to design more effective kites for various applications.
 
+    public StatsCollector statsCollector;
+
     public KiteJoyController joyController;
 
     public KitePPOAgent agent;
 
+    public Vector3 currentResultantForce;
 
-    public float WindStrength = 20.0f; // 400
+    // public float WindStrength = 20.0f; // 400
+
+    public WindSim windSim = null;
 
     public float lineLength = 35.0f;
 
@@ -29,6 +34,8 @@ public class JointSim : MonoBehaviour
     public ConfigurableJoint jointPowerRight;
     public ConfigurableJoint jointSteeringLeft;
     public ConfigurableJoint jointSteeringRight;
+
+    public bool varyPhysics = false;
     public float liftCoefficient = 0.3f;
     public float dragCoefficient = 0.1f;
     private float _dragCoefficient = 0.1f;
@@ -39,7 +46,7 @@ public class JointSim : MonoBehaviour
 
     public GameObject theFloor;
 
-    public float debugScale = 1.0f;
+    public float debugScale = 1f;
     public Rigidbody KiteRigidbody;
     public Rigidbody BaseRigidbody;
 
@@ -60,6 +67,7 @@ public class JointSim : MonoBehaviour
 
     private float stepsPerSecond = 0f;
 
+    public bool isResetting = false;
     private int resetCounter = 0;
     private void Start() {
         // Set the wind direction
@@ -72,19 +80,20 @@ public class JointSim : MonoBehaviour
         stepsPerSecond = (1 / Time.fixedDeltaTime);
         // start timer to simulate the wind (5 seconds)
         InvokeRepeating("UpdateWindAtKite", 0, 5);
+        varyPhysics = PlayerPrefs.GetString("varyPhysics") == "true";
         // InvokeRepeating("Reset", 0, 1);
     }
 
     // private void UpdateWindAtKite(float time, Vector3 space) {
     private void UpdateWindAtKite() {
-        WindStrength = WindStrength + Random.Range(-WindStrength/50, WindStrength/50);
-        // set max and min wind strength
-        if (WindStrength > 40) {
-            WindStrength = 40;
-        } else if (WindStrength < 25) {
-            WindStrength = 25;
-        }
-        windAtKite = new Vector3(0, 0, -WindStrength);
+        // WindStrength = WindStrength + Random.Range(-WindStrength/50, WindStrength/50);
+        // // set max and min wind strength
+        // if (WindStrength > 40) {
+        //     WindStrength = 40;
+        // } else if (WindStrength < 25) {
+        //     WindStrength = 25;
+        // }
+        windAtKite = windSim.wind;
         // Modify the following Unity function so as to model wind as a vector field full of 
     }
 
@@ -96,7 +105,7 @@ public class JointSim : MonoBehaviour
     private void OnDrawGizmos() {
         // Draw the wind direction
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(windIndicator.position, windIndicator.position - windAtKite);
+        // Gizmos.DrawLine(windIndicator.position, windIndicator.position - windAtKite);
         
     }
 
@@ -115,9 +124,16 @@ public class JointSim : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         // reset the kite
         Reset();
+        StartCoroutine(resetIsResettingTimer());
+    }
+
+    private IEnumerator resetIsResettingTimer() {
+        yield return new WaitForSeconds(0.3f);
+        isResetting = false;
     }
 
     public void Reset() {
+        if (statsCollector != null) statsCollector.OnCrash();
         // reset the kite
         // resetCounter++;
         // random horizontal range -45 to 45
@@ -195,13 +211,17 @@ public class JointSim : MonoBehaviour
         }
 
         // check for collisions with the floor
-        // if (kiteCollider.bounds.Intersects(theFloor.GetComponent<Collider>().bounds)) {
-        //     Debug.Log("Kite is on the floor");
-        //     startResetTimer();
-        //     // KiteRigidbody.AddForceAtPosition(-KiteRigidbody.velocity * 0.1f, KiteRigidbody.position);
-        //     KiteRigidbody.velocity = Vector3.zero;
-        //     KiteRigidbody.angularVelocity = Vector3.zero;
-        // }
+        if (kiteCollider.bounds.Intersects(theFloor.GetComponent<Collider>().bounds)) {
+            Debug.Log("Kite is on the floor");
+            if (!isResetting) {
+                isResetting = true;
+                startResetTimer();
+            }
+
+            // KiteRigidbody.AddForceAtPosition(-KiteRigidbody.velocity * 0.1f, KiteRigidbody.position);
+            KiteRigidbody.velocity = Vector3.zero;
+            KiteRigidbody.angularVelocity = Vector3.zero;
+        }
 
         // Apply the torque to the kite
         // KiteRigidbody.AddTorque(torque);
@@ -221,7 +241,11 @@ public class JointSim : MonoBehaviour
         
         // lines
         if (!joyController.isCut){
-            Debug.DrawLine(KiteRigidbody.position, BaseRigidbody.position, Color.white);
+            Debug.DrawLine(BaseRigidbody.position, KiteRigidbody.position + KiteRigidbody.transform.right * 4.0f + KiteRigidbody.transform.forward * 1f - KiteRigidbody.transform.up * 2f, Color.white);
+            Debug.DrawLine(BaseRigidbody.position, KiteRigidbody.position - KiteRigidbody.transform.right * 4.0f + KiteRigidbody.transform.forward * 1f - KiteRigidbody.transform.up * 2f, Color.white);
+            Debug.DrawLine(BaseRigidbody.position, KiteRigidbody.position + KiteRigidbody.transform.right * 4.0f - KiteRigidbody.transform.forward * 1f - KiteRigidbody.transform.up * 2f, Color.white);
+            Debug.DrawLine(BaseRigidbody.position, KiteRigidbody.position - KiteRigidbody.transform.right * 4.0f - KiteRigidbody.transform.forward * 1f - KiteRigidbody.transform.up * 2f, Color.white);
+            
         }
 
         if (counter < stepsPerSecond * 5) {
@@ -232,12 +256,30 @@ public class JointSim : MonoBehaviour
         
         if (counter > stepsPerSecond * 10) {
             if (counter % 10 == 0) {
+                if (varyPhysics)
+                {
+                    liftCoefficient = _liftCoefficient + Random.Range(-0.1f, 0.1f);
+                    liftCoefficient = Mathf.Clamp(liftCoefficient, 0.1f, 0.5f);
+                    dragCoefficient = _dragCoefficient + Random.Range(-0.1f, 0.1f);
+                    dragCoefficient = Mathf.Clamp(dragCoefficient, 0.1f, 0.5f);
+                }
                 score += jointPowerLeft.currentForce.magnitude * 0.002f;
                 score += jointPowerRight.currentForce.magnitude * 0.002f;
                 score += jointSteeringLeft.currentForce.magnitude * 0.002f;
                 score += jointSteeringRight.currentForce.magnitude * 0.002f;
             }
         }
+        // if (counter > stepsPerSecond * 10) {
+        //     if (counter % 10 == 0) {
+                // add the forces together
+                currentResultantForce = new Vector3(0, 0, 0);
+                currentResultantForce += jointPowerLeft.currentForce;
+                currentResultantForce += jointPowerRight.currentForce;
+                currentResultantForce += jointSteeringLeft.currentForce;
+                currentResultantForce += jointSteeringRight.currentForce;
+        //     }
+        // }
+
     }
 
     // void OnGUI() {

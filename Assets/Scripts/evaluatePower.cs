@@ -73,11 +73,11 @@ public class evaluatePower : MonoBehaviour
             Destroy(rightCar);
         }
 
-        if (resetCounter > maxResets)
-        {
-            // exit play mode
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
+        // if (resetCounter > maxResets)
+        // {
+        //     // exit play mode
+        //     UnityEditor.EditorApplication.isPlaying = false;
+        // }
         // instantiate cars
         downwindCar = Instantiate(downwindCarPrefab, new Vector3(0, 0, 0), Quaternion.identity);
         // Debug.Log("Downwind car instantiated");

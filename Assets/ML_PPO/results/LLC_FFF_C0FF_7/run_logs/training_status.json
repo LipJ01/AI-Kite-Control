@@ -1,0 +1,209 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 49981,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-49981.onnx",
+                "reward": null,
+                "creation_time": 1691184361.1936522,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-49981.pt"
+                ]
+            },
+            {
+                "steps": 99965,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-99965.onnx",
+                "reward": null,
+                "creation_time": 1691184396.8281856,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-99965.pt"
+                ]
+            },
+            {
+                "steps": 149949,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-149949.onnx",
+                "reward": null,
+                "creation_time": 1691184432.464703,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-149949.pt"
+                ]
+            },
+            {
+                "steps": 199997,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-199997.onnx",
+                "reward": null,
+                "creation_time": 1691184467.9844754,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-199997.pt"
+                ]
+            },
+            {
+                "steps": 249981,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-249981.onnx",
+                "reward": null,
+                "creation_time": 1691184503.3147712,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-249981.pt"
+                ]
+            },
+            {
+                "steps": 299965,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-299965.onnx",
+                "reward": null,
+                "creation_time": 1691184539.217952,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-299965.pt"
+                ]
+            },
+            {
+                "steps": 349999,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-349999.onnx",
+                "reward": 17.01429734826088,
+                "creation_time": 1691184580.593138,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-349999.pt"
+                ]
+            },
+            {
+                "steps": 399943,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-399943.onnx",
+                "reward": 14.197285691897074,
+                "creation_time": 1691184621.6729565,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-399943.pt"
+                ]
+            },
+            {
+                "steps": 449942,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-449942.onnx",
+                "reward": null,
+                "creation_time": 1691184659.0227976,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-449942.pt"
+                ]
+            },
+            {
+                "steps": 499990,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-499990.onnx",
+                "reward": null,
+                "creation_time": 1691184694.6355531,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-499990.pt"
+                ]
+            },
+            {
+                "steps": 549974,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-549974.onnx",
+                "reward": null,
+                "creation_time": 1691184730.80325,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-549974.pt"
+                ]
+            },
+            {
+                "steps": 599958,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-599958.onnx",
+                "reward": null,
+                "creation_time": 1691184766.117029,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-599958.pt"
+                ]
+            },
+            {
+                "steps": 649942,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-649942.onnx",
+                "reward": null,
+                "creation_time": 1691184802.0709124,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-649942.pt"
+                ]
+            },
+            {
+                "steps": 699990,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-699990.onnx",
+                "reward": null,
+                "creation_time": 1691184838.2803378,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-699990.pt"
+                ]
+            },
+            {
+                "steps": 749974,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-749974.onnx",
+                "reward": null,
+                "creation_time": 1691184873.7816384,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-749974.pt"
+                ]
+            },
+            {
+                "steps": 799958,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-799958.onnx",
+                "reward": null,
+                "creation_time": 1691184910.2522695,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-799958.pt"
+                ]
+            },
+            {
+                "steps": 849942,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-849942.onnx",
+                "reward": null,
+                "creation_time": 1691184945.827053,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-849942.pt"
+                ]
+            },
+            {
+                "steps": 899990,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-899990.onnx",
+                "reward": null,
+                "creation_time": 1691184981.44093,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-899990.pt"
+                ]
+            },
+            {
+                "steps": 949974,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-949974.onnx",
+                "reward": null,
+                "creation_time": 1691185017.32124,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-949974.pt"
+                ]
+            },
+            {
+                "steps": 999958,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-999958.onnx",
+                "reward": null,
+                "creation_time": 1691185053.0494668,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-999958.pt"
+                ]
+            },
+            {
+                "steps": 1000022,
+                "file_path": "results/LLC_FFF_C0FF_7/Flying/Flying-1000022.onnx",
+                "reward": null,
+                "creation_time": 1691185053.1029487,
+                "auxillary_file_paths": [
+                    "results/LLC_FFF_C0FF_7/Flying/Flying-1000022.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000022,
+            "file_path": "results/LLC_FFF_C0FF_7/Flying.onnx",
+            "reward": null,
+            "creation_time": 1691185053.1029487,
+            "auxillary_file_paths": [
+                "results/LLC_FFF_C0FF_7/Flying/Flying-1000022.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "1.11.0+cu102"
+    }
+}

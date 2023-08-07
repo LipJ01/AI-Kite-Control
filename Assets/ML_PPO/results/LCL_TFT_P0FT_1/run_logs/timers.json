@@ -1,0 +1,49 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1691235635",
+        "python_version": "3.9.7 (default, Sep 16 2021, 23:53:23) \n[Clang 12.0.0 ]",
+        "command_line_arguments": "/Users/jacklippold/miniforge3/envs/unity-mla/bin/mlagents-learn config/LCL_TFT.yaml --run-id=LCL_TFT_P0FT_1 --resume",
+        "mlagents_version": "0.28.0",
+        "mlagents_envs_version": "0.28.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.8.0.post3",
+        "numpy_version": "1.23.1",
+        "end_time_seconds": "1691235648"
+    },
+    "total": 13.472593375000002,
+    "count": 1,
+    "self": 0.01821983300000163,
+    "children": {
+        "run_training.setup": {
+            "total": 0.03728904199999983,
+            "count": 1,
+            "self": 0.03728904199999983
+        },
+        "TrainerController.start_learning": {
+            "total": 13.417084500000001,
+            "count": 1,
+            "self": 8.408300000262159e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 13.203973792,
+                    "count": 1,
+                    "self": 13.203973792
+                },
+                "TrainerController._save_models": {
+                    "total": 0.21302662499999947,
+                    "count": 1,
+                    "self": 0.0013893329999987714,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.2116372920000007,
+                            "count": 1,
+                            "self": 0.2116372920000007
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

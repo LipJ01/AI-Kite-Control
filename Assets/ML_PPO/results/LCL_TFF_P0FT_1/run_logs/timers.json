@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1691198136",
+        "python_version": "3.9.17 (main, Jul  5 2023, 20:47:11) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "D:\\miniconda3\\envs\\unity_ml_agents\\Scripts\\mlagents-learn config/LCL_TFF.yaml --run-id=LCL_TFF_P0FT_1 --force",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "1.7.1+cu110",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1691198137"
+    },
+    "total": 1.1681815000000002,
+    "count": 1,
+    "self": 0.0060195000000002885,
+    "children": {
+        "run_training.setup": {
+            "total": 0.08322289999999999,
+            "count": 1,
+            "self": 0.08322289999999999
+        },
+        "TrainerController.start_learning": {
+            "total": 1.0789391,
+            "count": 1,
+            "self": 0.00011460000000007575,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 1.0788065,
+                    "count": 1,
+                    "self": 1.0788065
+                },
+                "TrainerController._save_models": {
+                    "total": 1.7999999999851468e-05,
+                    "count": 1,
+                    "self": 1.7999999999851468e-05
+                }
+            }
+        }
+    }
+}

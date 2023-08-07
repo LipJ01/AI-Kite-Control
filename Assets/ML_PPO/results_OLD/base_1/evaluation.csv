@@ -1,0 +1,3 @@
+model_name,steps,time_elapsed,final_score,number_of_crashes
+base_1,9160569,60.00455,-994.9115,15
+base_1,9160569,60.01117,-1530.914,15

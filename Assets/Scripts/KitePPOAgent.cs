@@ -22,14 +22,11 @@ public class KitePPOAgent : Agent
     public KiteJoyController joyController;
 
     // reward mode observations
-    public bool rewardMode0 = true;
-    public bool rewardMode1 = false;
-    public bool rewardMode2 = false;
-    public bool rewardMode3 = false;
+    public string rewardMode;
 
     private float cumulativeReward = 0.0f;
 
-    public BoxCollider floorCollider;
+    // public BoxCollider floorCollider;
     public SphereCollider kiteCollider;
 
     public override void Initialize()
@@ -37,9 +34,9 @@ public class KitePPOAgent : Agent
         //Initialize agent
 
         // if no floorCollider, get it from the scene
-        if (floorCollider == null) {
-            floorCollider = GameObject.Find("Floor").GetComponent<BoxCollider>();
-        }
+        // if (floorCollider == null) {
+        //     floorCollider = GameObject.Find("ship").GetComponent<BoxCollider>();
+        // }
 
         // Debug.Log("KitePPOAgent initialized");
         // random reward mode.
@@ -50,7 +47,8 @@ public class KitePPOAgent : Agent
         // // start a timer to shuffle reward modes every 10 seconds.
         // InvokeRepeating("shuffleRewardModes", 10.0f, 10.0f);
         // start a timer to tweak wind (gusts) every 10 seconds.
-        InvokeRepeating("tweakWind", 10.0f, 10.0f);
+        // InvokeRepeating("tweakWind", 10.0f, 10.0f);
+        rewardMode = PlayerPrefs.GetString("rewardMode", "rewardMode0");
     }
 
     public override void OnEpisodeBegin()
@@ -65,12 +63,12 @@ public class KitePPOAgent : Agent
         // Debug.Log("jointSim.wind: " + jointSim.wind);
     }
 
-    private void shuffleRewardModes() {
-        rewardMode0 = Random.value > 0.5f;
-        rewardMode1 = Random.value > 0.5f;
-        rewardMode2 = Random.value > 0.5f;
-        rewardMode3 = Random.value > 0.5f;
-    }
+    // private void shuffleRewardModes() {
+    //     rewardMode0 = Random.value > 0.5f;
+    //     rewardMode1 = Random.value > 0.5f;
+    //     rewardMode2 = Random.value > 0.5f;
+    //     rewardMode3 = Random.value > 0.5f;
+    // }
 
     private Vector3 polarAngles(Vector3 kitePosition, Vector3 wind) {
         Vector3 basePosition = baseRigidbody.position + new Vector3(0, 1f, 0);
@@ -141,10 +139,10 @@ public class KitePPOAgent : Agent
         sensor.AddObservation(kiteRigidbody.angularVelocity.magnitude); // float
 
       
-        sensor.AddObservation(rewardMode0); // bool
-        sensor.AddObservation(rewardMode1); // bool
-        sensor.AddObservation(rewardMode2); // bool
-        sensor.AddObservation(rewardMode3); // bool
+        // sensor.AddObservation(rewardMode0); // bool
+        // sensor.AddObservation(rewardMode1); // bool
+        // sensor.AddObservation(rewardMode2); // bool
+        // sensor.AddObservation(rewardMode3); // bool
 
         // sensor.AddObservation(kiteRigidbody.rotation); // Quaternion
     }
@@ -157,11 +155,19 @@ public class KitePPOAgent : Agent
         float leftHand = actions.ContinuousActions[0];
         float rightHand = actions.ContinuousActions[1];
         // convert into horizontal and vertical bar position
-        float horizontal = (leftHand - rightHand) / 2.0f;
-        float vertical = (leftHand + rightHand) / 2.0f;
+        float horizontal;
+        float vertical;
+        if (PlayerPrefs.GetString("carOrPunching") == "car")
+        {
+            horizontal = actions.ContinuousActions[0];
+            vertical = actions.ContinuousActions[1];
+        }
+        else
+        {
+            horizontal = (leftHand - rightHand) / 2.0f;
+            vertical = (leftHand + rightHand) / 2.0f;
+        }
         // get both continuous actions
-        // float horizontal = actions.ContinuousActions[0];
-        // float vertical = actions.ContinuousActions[1];
         // float vertical = 0.0f;
         // if (horizontal < 0.02f) {
         //     horizontal = 0.0f;
@@ -175,31 +181,27 @@ public class KitePPOAgent : Agent
         float reward = 0.0f;
         // bool[] rewardModes = {rewardMode0, rewardMode1, rewardMode2, rewardMode3};
 
-        if (rewardMode0) {
+        if (rewardMode == "rewardMode0") {
           // reward for kite being in the air close to the zenith.
           reward += polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite).y / 90.0f;
-          SetReward(reward);
+          reward += Mathf.Abs(jointSim.currentResultantForce.z) / 100.0f;
         }
-        if (rewardMode1) {
+        if (rewardMode == "rewardMode1") {
             // reward for kite being in the air on the Left side of the wind.
             reward += polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite).y / 90.0f;
             reward += Mathf.Max(-polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite).x / 90.0f, 0.0f);
 
-            // ideally the resultant force to the left should be rewarded.
-            SetReward(reward);
         }
-        if (rewardMode2) {
+        if (rewardMode == "rewardMode2") {
             // reward for kite being in the air on the Right side of the wind.
             reward += polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite).y / 90.0f;
             reward += Mathf.Max(polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite).x / 90.0f, 0.0f);
             // ideally the resultant force to the right should be rewarded.
-            SetReward(reward);
         }
-        if (rewardMode3) {
+        if (rewardMode == "rewardMode3") {
             // reward downwind force generated
             reward += polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite).y / 90.0f;
             reward += Vector3.Dot(kiteRigidbody.velocity, jointSim.windAtKite.normalized);
-            SetReward(reward);
         }
         
         // reward += jointSim.score - cumulativeReward;
@@ -211,24 +213,33 @@ public class KitePPOAgent : Agent
         if (Mathf.Abs(jointSim.BarPositionAsControlInput.x)>0.99f) {
             reward -= 1f;
         }
-        if (isResetting){
-          if (jointSim.counter > 2000) {
-              reward += 10f;
-              EndEpisode();
-              jointSim.Reset();
-          }
+
+        if(!isResetting) {
+            isResetting = jointSim.isResetting;
+        } else {
+            reward -= 10f;
+            EndEpisode();
+            isResetting = false;
         }
+        SetReward(reward);
+        // if (isResetting){
+        //   if (jointSim.counter > 2000) {
+        //       reward += 10f;
+        //       EndEpisode();
+        //       jointSim.Reset();
+        //   }
+        // }
 
         // potentially end episode
-        if (kiteCollider.bounds.Intersects(floorCollider.bounds)) {
-            Debug.Log("Kite is on the floor, resetting (score: " + jointSim.score + ")");
-            Debug.Log("Kite position: " + polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite));
-            Debug.Log("Counter: " + jointSim.counter);
-            SetReward(-10f);
-            // cumulativeReward = 0.0f;
-            EndEpisode();
-            jointSim.Reset();
-        }
+        // if (kiteCollider.bounds.Intersects(floorCollider.bounds)) {
+        //     Debug.Log("Kite is on the floor, resetting (score: " + jointSim.score + ")");
+        //     Debug.Log("Kite position: " + polarAngles(kiteRigidbody.transform.localPosition, jointSim.windAtKite));
+        //     Debug.Log("Counter: " + jointSim.counter);
+        //     SetReward(-10f);
+        //     // cumulativeReward = 0.0f;
+        //     EndEpisode();
+        //     jointSim.Reset();
+        // }
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)

@@ -1,0 +1,6 @@
+model_name,steps,time_elapsed,final_score,number_of_crashes,varying_wind, wind_strength
+LLL_FFF_P0FF_1,49938,30.0034,3139.922,8,False,40
+LLL_FFF_P0FF_1,149972,30.00173,3079.152,8,False,40
+LLL_FFF_P0FF_1,249993,30.00852,3260.471,3,False,40
+LLL_FFF_P0FF_1,349950,30.0045,3490.404,0,False,40
+LLL_FFF_P0FF_1,449973,30.00792,3451.587,0,False,40

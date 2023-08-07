@@ -5,9 +5,14 @@ using UnityEngine.InputSystem;
 using Unity.MLAgents;
 using Unity.MLAgents.Policies;
 using UnityEngine.AI;
+#if UNITY_EDITOR
+    using UnityEditor;
+#endif
 
 public class KiteJoyController : MonoBehaviour
 {
+    public bool isEvaluation = false; // feels a bit volkswagen...
+
     private Vector2 moveInput;
     private Vector2 lookInput;
     public float upDownInput;
@@ -28,6 +33,7 @@ public class KiteJoyController : MonoBehaviour
 
     [SerializeField] private Unity.Barracuda.NNModel leftModel;
     [SerializeField] private Unity.Barracuda.NNModel rightModel;
+
     public BehaviorParameters behaviorParameters;
 
     public KitePPOAgent agent;
@@ -36,6 +42,33 @@ public class KiteJoyController : MonoBehaviour
     {
         jointSim = GetComponent<JointSim>();
         
+        // if (isEvaluation) {
+        //     string modelName = PlayerPrefs.GetString("model_name");
+        //     if (modelName == "")
+        //     {
+        //         Debug.Log("No model name");
+        //         return;
+        //     }
+        //     // ? string modelDirectory = "Assets/ML_PPO/results/" + modelName + "/flying.onnx";
+        //     string modelDirectory = "Assets/ML_PPO/results/" + modelName + "/Flying.onnx";
+
+        //     if (!System.IO.File.Exists(modelDirectory))
+        //     {
+        //         Debug.Log("No model file");
+        //         return;
+        //     }
+            
+        //     #if UNITY_EDITOR
+        //         Unity.Barracuda.NNModel nnModel = AssetDatabase.LoadAssetAtPath<Unity.Barracuda.NNModel>(modelDirectory);
+        //     #endif
+        //     if(nnModel == null)
+        //     {
+        //         Debug.Log("Failed to load model");
+        //         return;
+        //     }
+        //     behaviorParameters.Model = nnModel;
+        // }
+
         // get initial position of bar
         if (barTransform != null)
         {
@@ -102,26 +135,26 @@ public class KiteJoyController : MonoBehaviour
         }
     }
 
-    private void OnSwapModelLeft(InputValue value)
-    {
-        Debug.Log("Swapping Model");
-        behaviorParameters.Model = leftModel;
-        if (agent != null)
-        {
-            agent.rewardMode1 = true;
-            agent.rewardMode2 = false;
-        }
-    }
-    private void OnSwapModelRight(InputValue value)
-    {
-        Debug.Log("Swapping Model");
-        behaviorParameters.Model = rightModel;
-        if (agent != null)
-        {
-            agent.rewardMode1 = false;
-            agent.rewardMode2 = true;
-        }
-    }
+    // private void OnSwapModelLeft(InputValue value)
+    // {
+    //     Debug.Log("Swapping Model");
+    //     behaviorParameters.Model = leftModel;
+    //     if (agent != null)
+    //     {
+    //         agent.rewardMode1 = true;
+    //         agent.rewardMode2 = false;
+    //     }
+    // }
+    // private void OnSwapModelRight(InputValue value)
+    // {
+    //     Debug.Log("Swapping Model");
+    //     behaviorParameters.Model = rightModel;
+    //     if (agent != null)
+    //     {
+    //         agent.rewardMode1 = false;
+    //         agent.rewardMode2 = true;
+    //     }
+    // }
 
     void Update()
     {
@@ -129,8 +162,8 @@ public class KiteJoyController : MonoBehaviour
         // Debug.Log("Bar position: " + barPosition);
         if (barTransform != null)
         {
-            barTransform.localPosition = initialBarTransformPosition + new Vector3(0, jointSim.BarPositionAsControlInput.y * 0.2f , 0);
-            barTransform.localRotation = Quaternion.Euler(0, 0, -jointSim.BarPositionAsControlInput.x * 25f);
+            barTransform.localPosition = initialBarTransformPosition + new Vector3(0, jointSim.BarPositionAsControlInput.y * 1f , 0);
+            barTransform.localRotation = Quaternion.Euler(0, 0, -jointSim.BarPositionAsControlInput.x * 35f);
         }
     }
 }

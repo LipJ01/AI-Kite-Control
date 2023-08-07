@@ -1,0 +1,209 @@
+{
+    "Flying": {
+        "checkpoints": [
+            {
+                "steps": 49971,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-49971.onnx",
+                "reward": null,
+                "creation_time": 1691189164.3237162,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-49971.pt"
+                ]
+            },
+            {
+                "steps": 99941,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-99941.onnx",
+                "reward": 0.37298840284347534,
+                "creation_time": 1691189212.349105,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-99941.pt"
+                ]
+            },
+            {
+                "steps": 149946,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-149946.onnx",
+                "reward": null,
+                "creation_time": 1691189258.934304,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-149946.pt"
+                ]
+            },
+            {
+                "steps": 199994,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-199994.onnx",
+                "reward": null,
+                "creation_time": 1691189304.79718,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-199994.pt"
+                ]
+            },
+            {
+                "steps": 249936,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-249936.onnx",
+                "reward": null,
+                "creation_time": 1691189352.91275,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-249936.pt"
+                ]
+            },
+            {
+                "steps": 299984,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-299984.onnx",
+                "reward": null,
+                "creation_time": 1691189404.259101,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-299984.pt"
+                ]
+            },
+            {
+                "steps": 349968,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-349968.onnx",
+                "reward": null,
+                "creation_time": 1691189454.307456,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-349968.pt"
+                ]
+            },
+            {
+                "steps": 399952,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-399952.onnx",
+                "reward": null,
+                "creation_time": 1691189506.1975381,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-399952.pt"
+                ]
+            },
+            {
+                "steps": 449936,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-449936.onnx",
+                "reward": null,
+                "creation_time": 1691189557.699122,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-449936.pt"
+                ]
+            },
+            {
+                "steps": 499984,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-499984.onnx",
+                "reward": null,
+                "creation_time": 1691189608.640716,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-499984.pt"
+                ]
+            },
+            {
+                "steps": 549968,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-549968.onnx",
+                "reward": null,
+                "creation_time": 1691189663.5075488,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-549968.pt"
+                ]
+            },
+            {
+                "steps": 599952,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-599952.onnx",
+                "reward": null,
+                "creation_time": 1691189708.853343,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-599952.pt"
+                ]
+            },
+            {
+                "steps": 649936,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-649936.onnx",
+                "reward": null,
+                "creation_time": 1691189753.3993258,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-649936.pt"
+                ]
+            },
+            {
+                "steps": 699984,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-699984.onnx",
+                "reward": null,
+                "creation_time": 1691189798.419393,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-699984.pt"
+                ]
+            },
+            {
+                "steps": 749968,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-749968.onnx",
+                "reward": null,
+                "creation_time": 1691189843.3046021,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-749968.pt"
+                ]
+            },
+            {
+                "steps": 799952,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-799952.onnx",
+                "reward": null,
+                "creation_time": 1691189893.047172,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-799952.pt"
+                ]
+            },
+            {
+                "steps": 849936,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-849936.onnx",
+                "reward": null,
+                "creation_time": 1691189936.4520252,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-849936.pt"
+                ]
+            },
+            {
+                "steps": 899984,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-899984.onnx",
+                "reward": null,
+                "creation_time": 1691189986.949746,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-899984.pt"
+                ]
+            },
+            {
+                "steps": 949968,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-949968.onnx",
+                "reward": null,
+                "creation_time": 1691190039.972383,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-949968.pt"
+                ]
+            },
+            {
+                "steps": 999952,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-999952.onnx",
+                "reward": null,
+                "creation_time": 1691190090.25283,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-999952.pt"
+                ]
+            },
+            {
+                "steps": 1000016,
+                "file_path": "results/LCL_TFT_P0TF_1/Flying/Flying-1000016.onnx",
+                "reward": null,
+                "creation_time": 1691190090.2924218,
+                "auxillary_file_paths": [
+                    "results/LCL_TFT_P0TF_1/Flying/Flying-1000016.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1000016,
+            "file_path": "results/LCL_TFT_P0TF_1/Flying.onnx",
+            "reward": null,
+            "creation_time": 1691190090.2924218,
+            "auxillary_file_paths": [
+                "results/LCL_TFT_P0TF_1/Flying/Flying-1000016.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.8.0.post3"
+    }
+}
