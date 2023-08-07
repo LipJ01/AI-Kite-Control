@@ -47,7 +47,6 @@ Packages
 mono_crash.**
 .vscode/settings.json
 Assets/Day-Night Skyboxes/*
-*.onnx
 *.pt
 *.meta
 Assets/SUIMONO - WATER SYSTEM 2/*
